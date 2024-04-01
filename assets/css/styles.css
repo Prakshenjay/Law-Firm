@@ -264,44 +264,44 @@ color: var(--first-color);
 
 .home__parallax-img1 {
   background-image: url("/assets/img/imgm1.png");
-  z-index: var(--z-normal);
+  z-index: 1;
 }
 
 .home__parallax-img2 {
   background-image: url("/assets/img/imgm2.png");
-  z-index: var(--z-tooltip);
+  z-index: 3;
 }
 
 .home__parallax-img3 {
   background-image: url("/assets/img/imgm3.png");
-  z-index: var(--z-fixed);
+  z-index: 5;
 }
 
 .home__parallax-img4 {
   background-image: url("/assets/img/imgm4.png");
-  z-index: var(--z-fixed);
+  z-index: 7;
 }
 
 .home__title, .home__subtitle {
   position: absolute;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
-  color: var(--white-color);
+  color: rgba(255, 255, 255, 0.829);
 }
 
 .home__title {
   top: 30%;
-  right: 19%;
-  font-size: var(--biggest-font-size);
-  z-index: var(--z-normal);
+  /* right: 19%; */
+  font-size: 410%;
+  z-index: 3;
 }
 
 .home__subtitle {
   top: 67%;
   font-size: var(--h2-font-size);
   font-weight: bold;
-  z-index: var(--z-tooltip);
+  z-index: 6;
 }
 
 .home__scroll {
