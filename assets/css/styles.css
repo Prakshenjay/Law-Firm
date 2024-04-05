@@ -766,7 +766,7 @@ font-size: var(--small-font-size);
 .practice_area_list ul li {
   position: relative;
   left: 0;
-  color: #a26ef6;
+  color: var(--text-color);
   list-style: none;
   margin: 4px 0;
   border-left: 2px solid #7b00ff;
