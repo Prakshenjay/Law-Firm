@@ -327,7 +327,7 @@ color: var(--first-color);
 
 .sectioon {
   height: 100vh;
-  max-width: 950px;
+  /* max-width: 950px; */
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 2rem 0;
@@ -350,7 +350,7 @@ color: var(--first-color);
 }
 
 .section__img {
-  width: 285px;
+  /* width: 150px; */
   border-radius: .5rem;
 }
 
