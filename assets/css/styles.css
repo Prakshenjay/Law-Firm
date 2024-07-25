@@ -802,6 +802,61 @@ font-size: var(--small-font-size);
 }
 
 
+
+
+
+/* =============== ABOUT US ============== */
+
+.team {
+  padding: 4rem 0;
+}
+
+.team__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.team__member {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 10px;
+}
+
+.team__photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team__bio {
+  flex: 1;
+}
+
+.team__bio h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.team__bio p {
+  margin-bottom: 0.5rem;
+}
+
+/* .full-page {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify */
+
+
+
+
+
+
 /*=============== FOOTER ===============*/
 .footer__container{
   row-gap: 2.5rem;
