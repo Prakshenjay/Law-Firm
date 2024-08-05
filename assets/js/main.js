@@ -22,21 +22,22 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
+    
+const scrollActive = () =>{
+  	const scrollDown = window.scrollY
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+	sections.forEach(current =>{
+		const sectionHeight = current.offsetHeight,
+			  sectionTop = current.offsetTop - 58,
+			  sectionId = current.getAttribute('id'),
+			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
+		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+			sectionsClass.classList.add('active-link')
+		}else{
+			sectionsClass.classList.remove('active-link')
+		}                                                    
+	})
 }
 window.addEventListener('scroll', scrollActive)
 
@@ -132,12 +133,20 @@ gsap.from('.home__scroll', {opacity:0, duration: 3, delay: 1.5, y: 25, ease:'exp
 
 /*====== SCROLL REVEAL SECTION ======*/
 const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
     duration: 2500,
+    delay: 400,
     reset: true
 });
 
 /*Data*/
 sr.reveal('.section__data',{origin: 'left',distance: '70px'}); 
-
 /*Imgs*/
 sr.reveal('.section__img',{origin: 'left',distance: '90px',delay: 200}); 
+sr.reveal('.explore, .footer__container')
+sr.reveal('.footer__info, .director__name', {delay: 600})
+sr.reveal('.logos__img, .director__img', {interaval: 100})
+sr.reveal('.value__images, .contact__content, .value__description', {origin:'left'})
+sr.reveal('.value__content, .contact__images', {origin: 'right'})
+sr.reveal()
