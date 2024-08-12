@@ -1047,11 +1047,162 @@ font-size: var(--small-font-size);
   align-items: center;
   justify */
 
+/*=============== CAREER ===============*/
+.career{
+  background: linear-gradient(170deg,
+              hsl(0, 0%, 22%) 0%,
+              hsl(0, 0%, 6%) 30%);
+  padding-bottom: 0;
+}
 
 
+.career__container{
+  padding-top: 4rem;
+  row-gap: 3.5rem;
+}
+
+.career__title,
+.career__value-number{
+  color: #fff;
+}
+
+.career__title{
+  font-size: var(--biggest-font-size);
+  line-height: 120%;
+  margin-bottom: 1.25rem;
+}
+
+.career__descripion{
+  color: var(--text-color-Light);
+  margin-bottom: 2rem;
+}
+
+.career__search{
+  background-color: var(--body-color);
+  padding: .35rem .35rem .35rem .75rem;
+  display: flex;
+  align-items: center;
+  border-radius: .75rem;
+  border: 3px solid var(--text-color-Light);
+  margin-bottom: 2rem;
+}
+
+.career__search i{
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.career__search-input{
+  width: 90%;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  margin: 0 .5rem;
+}
+
+.career__Search-imput::placeholder{
+  color: var(--text-color-Light);
+}
+
+.career__value{
+  display: flex;
+  column-gap: 2.5rem;
+}
+
+.career__value-number{
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+}
+
+.career__value-number span{
+  color: var(--second-color);
+}
+
+.career__value-description{
+  display: flex;
+  color: var(--text-color-Light);
+  font-size: var(--smaller-font-size);
+}
+
+.career__images{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.career__orbe{
+  width: 265px;
+  height: 284px;
+  background: linear-gradient(180deg,
+    hsl(0, 0%, 16%) 93%,
+    hsl(0, 0%, 67%) 100%);
+  border-radius: 50%;
+}
+
+.career__img{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 125px 125px 12px 12px;
+  display: inline-flex;
+  align-items: flex-end;
+  bottom: -1.5rem;
+  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+}*/
+
+.subscribe{
+  padding: 2.5rem 0;
+}
+
+.subscribe__container{
+  background-color: var(--first-color);
+  padding: 3rem 2rem;
+  border-radius: 1.25rem;
+  border: 6px solid var(--first-color-Lighten);
+  text-align: center;
+}
+
+.subscribe__title{
+  font-size: var(--h2-font-size);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.subscribe__description{
+  color: hsl(228, 90%, 92%);
+  font-size: var(--small-font-size);
+  margin-bottom: 2rem;
+}
+
+.subscribe__button{
+  border: 2px solid #fff;
+  background: var(--first-color);
+  font-size: var(--small-font-size);
+}
+
+.subscribe__button:hover{
+  background-color: var(--first-color-Lighten);
+}
 
 
+button{
+  display: inline-block;
+  background: linear-gradient(101deg,
+           Ohsl(228, 66%, 53%),
+            Whsl(228, 66%, 47%));
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 5rem;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium) ;
+  box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
+  transition: .3s;
+  cursor: pointer;
+}
 
+button:hover{
+  box-shadow: 0 4px 12px hsla(228, 66%, 45%, .25);
+}
 /*=============== FOOTER ===============*/
 .footer__container{
   row-gap: 2.5rem;
@@ -1195,11 +1346,15 @@ font-size: var(--small-font-size);
   .section{
    padding: 3.5rem 0 1rem;
   }
- 
+
   .home{
+    padding-bottom: 0;
+   }
+ 
+  .career{
    padding-bottom: 0;
   }
- 
+
   .contact__card{
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
@@ -1209,9 +1364,23 @@ font-size: var(--small-font-size);
  
  @media screen and (max-width: 320px) {
 
+  .career__value{
+   column-gap: 1rem;
+  }
+
+  .career__img{
+    width: 220px;
+    height: 280px;
+  }
+
+  .career__orbe{
+    width: 240px;
+    height: 264px;
+  }
    .logos__container{
     gap: 2rem 1rem;
    }
+
    .explore__card{
      width: 230px;
      padding: .5rem .5rem .75rem;
@@ -1228,17 +1397,23 @@ font-size: var(--small-font-size);
      width: 236px;
      height: 280px;
    }
+
+   .subscribe__container{
+    padding: 2rem 1rem;
+   }
  
    .footer__content{
      gap: 2.5rem;
    }
  }
  
- 
- 
  /* For medium devices */
  @media screen and (min-width: 576px) {
- 
+   
+   .career__search{
+    width: 412px;
+   }
+
    .contact__card{
      grid-template-columns: repeat(2, 192px);
      justify-content: center;
@@ -1255,10 +1430,24 @@ font-size: var(--small-font-size);
  }
  
  @media screen and (min-width: 767px) {
- 
+
+   .career__container{
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 2rem;
+   }
+
+   .career__orbe{
+    align-self: flex-end;
+   }
+
+   .career__data{
+    margin-bottom: 2rem;
+   }
+
    .home__title {
      top: 34%;
    }
+
    .home__subtitle {
      top: 80%;
    }
@@ -1287,7 +1476,10 @@ font-size: var(--small-font-size);
    .contact__card{
      justify-content: initial;
    }
- 
+   
+   .subscribe__container{
+    padding: 3rem 13rem;
+   }
    .footer__container{
      grid-template-columns: repeat(2, max-content);
      justify-content: space-between;
@@ -1309,8 +1501,6 @@ font-size: var(--small-font-size);
   .nav__link:hover{
     color: var(--white-color);
   }
-
-
 
   .nav__item {
     margin-right: 3rem;
@@ -1464,7 +1654,65 @@ font-size: var(--small-font-size);
  .home__subtitle {
    top: 70%;
  }
- 
+
+ .career{
+  padding-bottom: 0;
+ }
+
+ .career__container{
+  padding-top: 5rem;
+  column-gap: 2rem;
+ }
+
+ .career__data{
+  padding-bottom: 4rem;
+ }
+
+ .career__title{
+  margin-bottom: 2rem;
+ }
+
+ .career__descripion,
+ .career__search{
+  margin-bottom: 3rem;
+ }
+
+ .career__value{
+  column-gap: 3.5rem;
+ }
+
+ .career__orbe{
+  width: 504px;
+  height: 611px;
+  border-radius: 256px 256px 0 0;
+ }
+
+ .career__img{
+  width: 472px;
+  height: 634px;
+  border-radius: 236px 236px 12px 12px;
+  bottom: -2.5rem;
+ }
+
+ .subscribe__container{
+  padding: 4rem 10rem 4.5rem;
+  border-radius: 2rem;
+  border: 12px solid var(--first-color);
+ }
+
+ .subscribe__title{
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+ }
+
+ .subscribe__description{
+  font-size: var(--normal-font-size);
+  padding: 0 8rem;
+ }
+
+ .subscribe__button{
+  font-size: var(--normal-font-size);
+ }
  
  .footer__content{
    grid-template-columns: repeat(4, max-content);
@@ -1495,6 +1743,10 @@ font-size: var(--small-font-size);
  .container{
    margin-left: auto;
    margin-right: auto;
+ }
+
+ .career__container{
+  column-gap: 4rem;
  }
  }
  
