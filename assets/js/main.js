@@ -144,9 +144,14 @@ const sr = ScrollReveal({
 sr.reveal('.section__data',{origin: 'left',distance: '70px'}); 
 /*Imgs*/
 sr.reveal('.section__img',{origin: 'left',distance: '90px',delay: 200}); 
-sr.reveal('.explore, .footer__container')
+sr.reveal('.career__title, .explore, .subscribe__container ,.footer__container')
+sr.reveal('.career__descripion', {delay: 500})
+sr.reveal('.career__search', {delay: 600})
+sr.reveal('.career__value', {delay: 700})
+sr.reveal('.career__images', {delay: 800, origin: 'bottom'})
+sr.reveal('.logos__img', {delay: 300})
 sr.reveal('.footer__info, .director__name', {delay: 600})
 sr.reveal('.logos__img, .director__img', {interaval: 100})
 sr.reveal('.value__images, .contact__content, .value__description', {origin:'left'})
 sr.reveal('.value__content, .contact__images', {origin: 'right'})
-sr.reveal()
+sr.reveal('.director_discription', {origin: 'right'})
