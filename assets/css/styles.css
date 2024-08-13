@@ -946,7 +946,7 @@ font-size: var(--small-font-size);
 
 /*=============== PRACTICE AREAS ===============*/
 
-.practice_area_list {
+/* .practice_area_list {
   position: relative;
 }
 .practice_area_list h2 {
@@ -994,8 +994,367 @@ font-size: var(--small-font-size);
 }
 .practice_area_list ul li:hover:before {
   transform: scaleX(1);
-}
+} */
 
+//
+
+.icon-arrow:before {
+	content: '\e80d';
+}
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+section {
+	padding-bottom: 0;
+	margin-bottom: -2.75em;
+}
+section h2 {
+	font-size: 8.5em;
+	line-height: 1;
+}
+a {
+	text-decoration: none;
+	color: #C59F6B;
+	-webkit-transition: color .5s ease 0s;
+	-moz-transition: color .5s ease 0s;
+	-o-transition: color .5s ease 0s;
+	transition: color .5s ease 0s;
+}
+a:hover {
+	text-decoration: none;
+	color: #26344E;
+}
+a[href^=tel] {
+	cursor: default;
+}
+.practices-area {
+	background-color: #FFFFFF;
+}
+.home-page .practices-area {
+	padding: 0;
+}
+.personal-injury-page .practices-area {
+	background-color: #F0F1F2;
+}
+.practices-area .main {
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+}
+.practices-area .main>header {}
+.practices-area .box {
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0 .5%;
+}
+.no-flexbox .practices-area .box {
+	display: table;
+	width: 100%;
+}
+.practices-area .box>* {
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+.no-flexbox .practices-area .box>* {
+	display: table-cell;
+	vertical-align: middle;
+}
+.practices-area .box header {
+	padding-bottom: 0;
+	width: 33%;
+	padding-right: 2%;
+	text-align: left;
+}
+.practices-area .box .content-style {
+	width: 66%;
+	font-family: 'Hind', sans-serif;
+	font-size: 1.333em;
+	line-height: 1.2;
+}
+.practices-area .box .content-style p {
+	margin: 0;
+}
+.practices-area .container {
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+.practices-area .practices-list {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.no-flexbox .practices-area .practices-list {
+	display: block;
+}
+.no-flexbox .practices-area .practices-list:after {
+	content: ' ';
+	display: block;
+	clear: both;
+}
+.practices-area .practices-list li {
+	-webkit-flex: 1 1 20%;
+	-ms-flex: 1 1 20%;
+	flex: 1 1 20%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+.personal-injury-page .practices-area .practices-list li {
+	-webkit-flex: 1 1 33%;
+	-ms-flex: 1 1 33%;
+	flex: 1 1 33%;
+}
+.no-flexbox .practices-area .practices-list li {
+	display: block;
+	width: 20%;
+	float: left;
+}
+.no-flexbox .practices-area .practices-list li:nth-child(4n+1) {
+	clear: left;
+}
+.practices-area .practices-list li a {
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	text-align: center;
+	width: 100%;
+	background-color: #F0F1F2;
+	border: solid .5em #FFFFFF;
+	padding: 4em 8%;
+	-webkit-transition: background-color .4s ease 0s;
+	-moz-transition: background-color .4s ease 0s;
+	-o-transition: background-color .4s ease 0s;
+	transition: background-color .4s ease 0s;
+}
+.personal-injury-page .practices-area .practices-list li a {
+	border-color: #F0F1F2;
+	background-color: #FFFFFF;
+}
+.no-flexbox .practices-area .practices-list li a {
+	display: block;
+}
+.no-touch .practices-area .practices-list li a:hover {
+	background-color: #C59F6B;
+}
+.no-touch .practices-area.featured .practices-list:hover li a:not(:hover) {
+	background-color: transparent;
+}
+.no-touch .practices-area.featured .practices-list:hover li a:not(:hover)>* {
+	opacity: 0;
+}
+.practices-area .practices-list li a img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -2;
+	-webkit-transition: opacity .4s ease 0s;
+	-moz-transition: opacity .4s ease 0s;
+	-o-transition: opacity .4s ease 0s;
+	transition: opacity .4s ease 0s;
+	opacity: 0;
+}
+.practices-area.active .practices-list li a img {
+	background-image: none !important;
+	display: block;
+}
+.practices-area .practices-list li a:hover img {
+	opacity: 1;
+}
+.practices-area .practices-list li a icon {
+	display: block;
+	font-size: 2.5em;
+	-webkit-transition: color .4s ease 0s, opacity .4s ease 0s;
+	-moz-transition: color .4s ease 0s, opacity .4s ease 0s;
+	-o-transition: color .4s ease 0s, opacity .4s ease 0s;
+	transition: color .4s ease 0s, opacity .4s ease 0s;
+}
+.no-touch .practices-area .practices-list li a:hover icon {
+	color: #655B57;
+}
+.practices-area .practices-list li a h3 {
+	text-transform: uppercase;
+	margin-top: 1em;
+	-webkit-transition: color .4s ease 0s, opacity .4s ease 0s;
+	-moz-transition: color .4s ease 0s, opacity .4s ease 0s;
+	-o-transition: color .4s ease 0s, opacity .4s ease 0s;
+	transition: color .4s ease 0s, opacity .4s ease 0s;
+	width: 100%;
+	color: #26344E;
+	line-height: 1.2;
+}
+.no-touch .practices-area .practices-list li a:hover h3 {
+	color: #FFFFFF;
+}
+.practices-area .btn-con {
+	text-align: center;
+	margin-top: 2em;
+}
+.practices-area .btn-con .btn {
+	min-width: 220px;
+}
+.practices-area .scrolling-list-nav {
+	padding: 0 3%;
+}
+@media screen and (max-width:1300px) {
+	.practices-area.featured {
+		background-color: #F6F7F7;
+		padding: 5% 0;
+	}
+	.practices-area .practices-list li a {
+		border-color: #F6F7F7;
+	}
+}
+@media screen and (max-width:1000px) {
+	.practices-area .practices-list li {
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		width: 32%;
+	}
+	.practices-area .practices-list li a {
+		padding: 2em 3%;
+		min-height: 12.5em;
+	}
+	.practices-area .scrolling-list-nav {
+		z-index: 2;
+	}
+	.practices-area.featured.active .container {
+		margin: 0 2em;
+	}
+	.practices-area.featured {
+		padding: 3.5em 0;
+	}
+}
+@media screen and (max-width:800px) {
+	.practices-area .box {
+		display: block;
+	}
+	.practices-area .box header {
+		width: 100%;
+		padding: 0 0 1em;
+		text-align: center;
+	}
+	.practices-area .box .content-style {
+		width: 100%;
+		text-align: center;
+	}
+	.practices-area.featured.active .container {
+		margin: 0 2em;
+	}
+	.practices-area .practices-list {
+		padding: 1.5em 0;
+	}
+	.practices-area.featured.active .practices-list {
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-transition: -webkit-transform .5s ease 0s;
+		-moz-transition: -moz-transform .5s ease 0s;
+		-o-transition: -o-transform .5s ease 0s;
+		transition: transform .5s ease 0s;
+		padding: 0;
+	}
+	.practices-area .practices-list li {
+		width: 49%;
+	}
+	.practices-area.featured.active .practices-list li {
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+	}
+	.practices-area .practices-list li a {
+		min-height: 0;
+	}
+	.practices-area .practices-list li a .more {
+		max-height: none;
+		margin-top: .5em;
+		color: #808080;
+		-webkit-transition: color .4s ease 0s;
+		-moz-transition: color .4s ease 0s;
+		-o-transition: color .4s ease 0s;
+		transition: color .4s ease 0s;
+	}
+	.practices-area .practices-list li a:hover .more {
+		color: #FFFFFF;
+	}
+	.practices-area .practices-list li a .more:before, .practices-area .practices-list li a .more:after {
+		background-color: #D6D9DC;
+	}
+}
+@media screen and (max-width:650px) {
+	.practices-area .practices-list li a icon {
+		font-size: 2em;
+	}
+	.practices-area .practices-list li a .more, .no-touch .practices-area .practices-list li a:hover .more {
+		margin-top: .3em;
+	}
+	.practices-area.featured {
+		padding: 2.75em 0;
+	}
+}
+@media screen and (max-width:550px) {
+	.practices-area:not(.featured) .practices-list {
+		padding: 1em 0;
+		_display: block;
+		-webkit-align-items: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+	}
+	.practices-area.featured .practices-list {
+		padding: 0;
+	}
+	.practices-area:not(.featured) .practices-list li {
+		margin: 0;
+		-webkit-flex: 0 1 auto;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		width: 49%;
+	}
+	.practices-area:not(.featured) .practices-list li:nth-child(n+2) {
+		_margin-top: .75em;
+	}
+	.practices-area .box .content-style {
+		font-size: 1em;
+		line-height: 1.4;
+	}
+	.practices-area .scrolling-list-nav {
+		top: 45%;
+	}
+}
 
 
 
